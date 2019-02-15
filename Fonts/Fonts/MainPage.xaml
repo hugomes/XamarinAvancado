@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Fonts"
+             x:Class="Fonts.MainPage">
+
+    <StackLayout VerticalOptions="Center">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" x:Name="lbPrincipal"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Label Text="Label com fonte normal" x:Name="lbNormal"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Label Text="Label com fonte modificada" x:Name="lbModificado"
+           HorizontalOptions="Center" Style="{DynamicResource stFontePadrao}"
+           VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>

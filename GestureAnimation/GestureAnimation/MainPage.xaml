@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GestureAnimation"
+             x:Class="GestureAnimation.MainPage">
+
+    <AbsoluteLayout x:Name="Container">
+        <!-- Place new controls here -->
+        <Label x:Name="lbPrincipal" Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Label.GestureRecognizers>
+        </Label>
+
+        <BoxView x:Name="bvMyBox" Color="Green" WidthRequest="50" HeightRequest="50"></BoxView>
+    </AbsoluteLayout>
+
+</ContentPage>

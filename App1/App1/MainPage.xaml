@@ -2,13 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1"
+             xmlns:lib="clr-namespace:App1.Lib"
              x:Class="App1.MainPage">
 
     <StackLayout>
         <!-- Place new controls here -->
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="Center" />
+
+        <Entry x:Name="txtNome" Placeholder="Digite seu nome" Text="">
+            <Entry.Behaviors>
+                <lib:MaiusculoBehavior />
+            </Entry.Behaviors>
+            <!--triggers baseadas em propriedades-->
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Blue"></Setter>
+                    <Setter Property="TextColor" Value="White"></Setter>
+                </Trigger>
+            </Entry.Triggers>
+        </Entry>
+
+        <Entry x:Name="txtEmail" Placeholder="Digite seu email">
+            <!--triggers baseadas em eventos-->
+            <Entry.Triggers>
+                <EventTrigger Event="TextChanged">
+                    <lib:EmailValidoTrigger/>
+                </EventTrigger>
+            </Entry.Triggers>
+        </Entry>
+        
+        <Button Text="Salvar">
+            <!--triggers baseadas em dados--> 
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference txtNome}, Path=Text.Length}" Value="0">
+                    <Setter Property="TextColor" Value="White"></Setter>
+                    <Setter Property="BackgroundColor" Value="Gray"></Setter>
+                    <Setter Property="IsEnabled" Value="False"></Setter>
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
     </StackLayout>
 
 </ContentPage>

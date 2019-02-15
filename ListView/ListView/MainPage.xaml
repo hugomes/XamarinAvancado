@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListView"
+             xmlns:lib="clr-namespace:ListView.Lib"
+             x:Class="ListView.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <lib:SeletorTemplate x:Key="SelectorPessoa"></lib:SeletorTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <!--GroupDisplayBinding="{Binding Titulo}" GroupShortNameBinding="{Binding TituloCurto}"-->
+        <ListView x:Name="ListaFuncionarios" IsGroupingEnabled="True" 
+                  ItemTemplate="{StaticResource Key=SelectorPessoa}">
+            <ListView.Header>
+                <Label Text="Lista de jogadores" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </ListView.Header>
+            <ListView.Footer>
+                <Label Text="AABB Recife" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </ListView.Footer>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="15,0,0,0">
+                            <Label Text="{Binding TituloCurto}"/>
+                            <Label Text="{Binding Titulo}" TextColor="LightGray"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <!--<ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding  Nome}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>-->
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

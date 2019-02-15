@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AnnotationValidation"
+             x:Class="AnnotationValidation.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="txtNome" Placeholder="Digite seu nome" />
+        <Entry x:Name="txtEmail" Placeholder="Digite seu email" />
+        <Entry x:Name="txtCPF" Placeholder="Digite seu CPF" />
+        <Button x:Name="btSalvar" />
+
+        <Label x:Name="lbMensagem"></Label>
+    </StackLayout>
+
+</ContentPage>

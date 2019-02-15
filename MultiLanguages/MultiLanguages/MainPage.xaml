@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MultiLanguages"
+             xmlns:translate="clr-namespace:MultiLanguages.Translate"
+             x:Class="MultiLanguages.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="lbPrincipal" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+        <Label Text="{translate:Translate Text=MSG_01}"></Label>
+    </StackLayout>
+
+</ContentPage>

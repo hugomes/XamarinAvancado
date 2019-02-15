@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StorageDatabase"
+             x:Class="StorageDatabase.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="lbArquivo" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+        <Button x:Name="btLerArquivo" Text="Ler arquivo"></Button>
+
+        <Entry x:Name="enConteudo" Placeholder="Digite um texto"></Entry>
+        <Button x:Name="btEscreverArquivo" Text="Excrever arquivo"></Button>
+    </StackLayout>
+
+</ContentPage>

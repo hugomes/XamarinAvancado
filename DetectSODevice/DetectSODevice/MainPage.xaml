@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DetectSODevice"
+             x:Class="DetectSODevice.MainPage">
+
+    <StackLayout x:Name="Container">
+        <!-- Place new controls here -->
+        <Label x:Name="lbMain" Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android" Value="20"></On>
+                    <On Platform="iOS, WinPhone" Value="60"></On>
+                </OnPlatform>
+            </Label.FontSize>
+
+            <Label.BackgroundColor>
+                <OnIdiom x:TypeArguments="Color" Phone="Green">
+                </OnIdiom>
+            </Label.BackgroundColor>
+            
+        </Label>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RealmDatabase"
+             x:Class="RealmDatabase.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <Entry x:Name="enItem" Placeholder="Escreva o item"></Entry>
+            <Entry x:Name="enQtd" Keyboard="Numeric" Placeholder="Escreva a quantidade"></Entry>
+            <Button x:Name="btSalvar" Text="Salvar"></Button>
+        </StackLayout>
+        <StackLayout>
+            <ListView x:Name="lvListaItens">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Item}" Detail="{Binding Quantidade}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Excluir" x:Name="btDelete" Clicked="BtDelete_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                                <MenuItem Text="Alterar" x:Name="btUpdate" Clicked="BtUpdate_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Lista de materiais" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>

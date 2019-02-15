@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomControlXamarinForms"
+             xmlns:controls="clr-namespace:CustomControlXamarinForms.Controls"
+             x:Class="CustomControlXamarinForms.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+
+        <controls:MyControl x:Name="myControl" Titulo="Titulo1" TituloCor="Blue" Image="tigre.png" Tapped="MyControl_Tapped"/>
+        <controls:MyControl />
+    </StackLayout>
+
+</ContentPage>
